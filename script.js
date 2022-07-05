@@ -16,6 +16,19 @@ let section = document.querySelector(`.movie-list`);
 //   });
 // };
 
+let button2 = document.querySelector("#search2");
+let input2 = document.querySelector("#allegiance-input");
+let section2 = document.querySelector(`.allg-list`);
+
+button2.addEventListener("click", async () => {
+  let allgValue = input2.value;
+  const response2 = await axios.get(
+    `https://anapioficeandfire.com/api/houses/${allgValue}`
+  );
+  let houseName = response.data.name;
+  let houseNameResult = document.createElement("h1");
+});
+
 button.addEventListener("click", async () => {
   let movieChoice = input.value;
   const response = await axios.get(
@@ -29,17 +42,17 @@ button.addEventListener("click", async () => {
   section.appendChild(result);
 
   let genderOptions = response.data.gender;
-  let gender = document.createElement("h1");
+  let gender = document.createElement("h3");
   gender.innerHTML = `Sex: ${genderOptions}`;
   section.appendChild(gender);
 
   let diedOptions = response.data.died;
-  let died = document.createElement("h1");
+  let died = document.createElement("h3");
   died.innerHTML = `Year of Death: ${diedOptions}`;
   section.appendChild(died);
 
   let allegiancesOptions = response.data.allegiances;
-  let allegiances = document.createElement("h1");
+  let allegiances = document.createElement("h3");
   allegiances.innerHTML = `Allegiance: ${allegiancesOptions}`;
   section.appendChild(allegiances);
   //   renderList(movieOptions);
