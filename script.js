@@ -56,6 +56,11 @@ button2.addEventListener("click", async () => {
   foundedResult.innerHTML = `Year of Founding: ${foundeds}`;
   section2.appendChild(foundedResult);
 
+  let lord = response2.data.currentLord;
+  let lordResult = document.createElement("h3");
+  lordResult.innerHTML = `Current Lord: ${lord}`;
+  section2.appendChild(lordResult);
+
   let swornMember = response2.data.swornMembers;
   let memberResult = document.createElement("h3");
   memberResult.innerHTML = `Sworn Members: ${swornMember}`;

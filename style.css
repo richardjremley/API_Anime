@@ -1,2 +1,9 @@
 h3 {margin: 0 auto;
 word-wrap: break-word;}
+body {
+    background-image:url(https://n3rdcore.it/wp-content/uploads/2019/04/GOT-8.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+
+}
