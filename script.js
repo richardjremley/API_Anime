@@ -40,6 +40,26 @@ button2.addEventListener("click", async () => {
   let mottoResult = document.createElement("h3");
   mottoResult.innerHTML = `Motto: ${motto}`;
   section2.appendChild(mottoResult);
+
+  let overlords = response2.data.overlord;
+  let overlordResult = document.createElement("h3");
+  overlordResult.innerHTML = `Overlord: ${overlords}`;
+  section2.appendChild(overlordResult);
+
+  let regions = response2.data.region;
+  let regionResult = document.createElement("h3");
+  regionResult.innerHTML = `Home region: ${regions}`;
+  section2.appendChild(regionResult);
+
+  let foundeds = response2.data.founded;
+  let foundedResult = document.createElement("h3");
+  foundedResult.innerHTML = `Year of Founding: ${foundeds}`;
+  section2.appendChild(foundedResult);
+
+  let swornMember = response2.data.swornMembers;
+  let memberResult = document.createElement("h3");
+  memberResult.innerHTML = `Sworn Members: ${swornMember}`;
+  section2.appendChild(memberResult);
 });
 
 button.addEventListener("click", async () => {
@@ -62,6 +82,11 @@ button.addEventListener("click", async () => {
   let titleResult = document.createElement("h3");
   titleResult.innerHTML = `Titles: ${title}`;
   section.appendChild(titleResult);
+
+  let alias = response.data.aliases;
+  let aliasResult = document.createElement("h3");
+  aliasResult.innerHTML = `Aliases: ${alias}`;
+  section.appendChild(aliasResult);
 
   let allegiancesOptions = response.data.allegiances;
   let allegiances = document.createElement("h3");
