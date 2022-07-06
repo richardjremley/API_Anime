@@ -25,8 +25,21 @@ button2.addEventListener("click", async () => {
   const response2 = await axios.get(
     `https://anapioficeandfire.com/api/houses/${allgValue}`
   );
-  let houseName = response.data.name;
+  console.log(response2);
+  let houseName = response2.data.name;
   let houseNameResult = document.createElement("h1");
+  houseNameResult.innerHTML = `House Name: ${houseName}`;
+  section2.appendChild(houseNameResult);
+
+  let armsCoat = response2.data.coatOfArms;
+  let armsCoatResult = document.createElement("h3");
+  armsCoatResult.innerHTML = `Coat of Arms: ${armsCoat}`;
+  section2.appendChild(armsCoatResult);
+
+  let motto = response2.data.words;
+  let mottoResult = document.createElement("h3");
+  mottoResult.innerHTML = `Motto: ${motto}`;
+  section2.appendChild(mottoResult);
 });
 
 button.addEventListener("click", async () => {
@@ -45,16 +58,21 @@ button.addEventListener("click", async () => {
   let gender = document.createElement("h3");
   gender.innerHTML = `Sex: ${genderOptions}`;
   section.appendChild(gender);
+  let title = response.data.titles;
+  let titleResult = document.createElement("h3");
+  titleResult.innerHTML = `Titles: ${title}`;
+  section.appendChild(titleResult);
+
+  let allegiancesOptions = response.data.allegiances;
+  let allegiances = document.createElement("h3");
+  allegiances.innerHTML = `Allegiance: ${allegiancesOptions}`;
+  section.appendChild(allegiances);
 
   let diedOptions = response.data.died;
   let died = document.createElement("h3");
   died.innerHTML = `Year of Death: ${diedOptions}`;
   section.appendChild(died);
 
-  let allegiancesOptions = response.data.allegiances;
-  let allegiances = document.createElement("h3");
-  allegiances.innerHTML = `Allegiance: ${allegiancesOptions}`;
-  section.appendChild(allegiances);
   //   renderList(movieOptions);
   //   console.log(movieOptions);
 });
