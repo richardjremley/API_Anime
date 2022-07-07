@@ -91,31 +91,24 @@ button.addEventListener("click", async () => {
   let alias = response.data.aliases.join(",   ");
   let aliasResult = document.createElement("h3");
   aliasResult.innerHTML = `Aliases: ${alias}`;
-  if ((alias = ` ""`)) {
-  } else {
-    section.appendChild(aliasResult);
-  }
+
+  section.appendChild(aliasResult);
 
   let allegiancesOptions = response.data.allegiances;
   let allegiances = document.createElement("h3");
   allegiances.innerHTML = `Allegiance: ${allegiancesOptions}`;
-  if ((allegiancesOptions = ` ""`)) {
-  } else {
-    section.appendChild(allegiances);
-  }
+
+  section.appendChild(allegiances);
 
   let cultureOptions = response.data.culture;
   let cultures = document.createElement("h3");
   cultures.innerHTML = `Culture: ${cultureOptions}`;
-  if ((cultureOptions = ` ""`)) {
-  } else {
-    section.appendChild(cultures);
-  }
+
+  section.appendChild(cultures);
+
   let diedOptions = response.data.died;
   let died = document.createElement("h3");
   died.innerHTML = `Year of Death: ${diedOptions}`;
-  if ((diedOptions = ` ""`)) {
-  } else {
-    section.appendChild(died);
-  }
+
+  section.appendChild(died);
 });
