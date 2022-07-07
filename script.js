@@ -27,8 +27,8 @@ button2.addEventListener("click", async () => {
   );
   console.log(response2);
   let houseName = response2.data.name;
-  let houseNameResult = document.createElement("h1");
-  houseNameResult.innerHTML = `House Name: ${houseName}`;
+  let houseNameResult = document.createElement("h2");
+  houseNameResult.innerHTML = `${houseName}`;
   section2.appendChild(houseNameResult);
 
   let armsCoat = response2.data.coatOfArms;
@@ -48,7 +48,7 @@ button2.addEventListener("click", async () => {
 
   let regions = response2.data.region;
   let regionResult = document.createElement("h3");
-  regionResult.innerHTML = `Home region: ${regions}`;
+  regionResult.innerHTML = `Home Region: ${regions}`;
   section2.appendChild(regionResult);
 
   let foundeds = response2.data.founded;
@@ -61,10 +61,10 @@ button2.addEventListener("click", async () => {
   lordResult.innerHTML = `Current Lord: ${lord}`;
   section2.appendChild(lordResult);
 
-  let swornMember = response2.data.swornMembers;
-  let memberResult = document.createElement("h3");
-  memberResult.innerHTML = `Sworn Members: ${swornMember}`;
-  section2.appendChild(memberResult);
+  //   let swornMember = response2.data.swornMembers;
+  //   let memberResult = document.createElement("h3");
+  //   memberResult.innerHTML = `Sworn Members: ${swornMember}`;
+  //   section2.appendChild(memberResult);
 });
 
 button.addEventListener("click", async () => {
@@ -75,7 +75,7 @@ button.addEventListener("click", async () => {
   console.log(response);
 
   let nameOptions = response.data.name;
-  let result = document.createElement("h1");
+  let result = document.createElement("h2");
   result.innerHTML = `Name: ${nameOptions}`;
   section.appendChild(result);
 
@@ -83,12 +83,12 @@ button.addEventListener("click", async () => {
   let gender = document.createElement("h3");
   gender.innerHTML = `Sex: ${genderOptions}`;
   section.appendChild(gender);
-  let title = response.data.titles;
+  let title = response.data.titles.join(",    ");
   let titleResult = document.createElement("h3");
   titleResult.innerHTML = `Titles: ${title}`;
   section.appendChild(titleResult);
 
-  let alias = response.data.aliases;
+  let alias = response.data.aliases.join(",   ");
   let aliasResult = document.createElement("h3");
   aliasResult.innerHTML = `Aliases: ${alias}`;
   section.appendChild(aliasResult);
@@ -102,7 +102,4 @@ button.addEventListener("click", async () => {
   let died = document.createElement("h3");
   died.innerHTML = `Year of Death: ${diedOptions}`;
   section.appendChild(died);
-
-  //   renderList(movieOptions);
-  //   console.log(movieOptions);
 });
