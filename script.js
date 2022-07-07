@@ -1,20 +1,6 @@
 let button = document.querySelector("#search");
 let input = document.querySelector("#search-input");
 let section = document.querySelector(`.movie-list`);
-// const renderList = (movies) => {
-//   movies.map((currentMovie) => {
-//     let movieName = currentMovie.title;
-//     console.log(movieName);
-//     // let movieImage = currentMovie.poster_path;
-//     let movieTitle = document.createElement("h1");
-//     // let movieImage2 = document.createElement("img");
-//     movieTitle.innerText = `${movieName}`;
-//     // movieImage2.setAttribute("src", `${IMAGE_BASE_PATH}${movieImage}`);
-
-//     section.appendChild(movieTitle);
-//     section.appendChild(movieImage2);
-//   });
-// };
 
 let button2 = document.querySelector("#search2");
 let input2 = document.querySelector("#allegiance-input");
@@ -60,11 +46,6 @@ button2.addEventListener("click", async () => {
   let lordResult = document.createElement("h3");
   lordResult.innerHTML = `Current Lord: ${lord}`;
   section2.appendChild(lordResult);
-
-  //   let swornMember = response2.data.swornMembers;
-  //   let memberResult = document.createElement("h3");
-  //   memberResult.innerHTML = `Sworn Members: ${swornMember}`;
-  //   section2.appendChild(memberResult);
 });
 
 button.addEventListener("click", async () => {
@@ -103,9 +84,10 @@ button.addEventListener("click", async () => {
   let cultureOptions = response.data.culture;
   let cultures = document.createElement("h3");
   cultures.innerHTML = `Culture: ${cultureOptions}`;
-
-  section.appendChild(cultures);
-
+  if ((cultureOptions = `""`)) {
+  } else {
+    section.appendChild(cultures);
+  }
   let diedOptions = response.data.died;
   let died = document.createElement("h3");
   died.innerHTML = `Year of Death: ${diedOptions}`;
