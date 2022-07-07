@@ -35,3 +35,7 @@ h4 {
     color:#101010;
     text-shadow: 0px -2px 4px #fff, 0px -2px 10px rgb(247, 247, 242), 0px -10px 20px         rgb(245, 246, 245), 0px -20px 40px rgb(241, 233, 233); 
 }
+
+audio {
+    padding: 25px 0px 0px 0px;
+}
