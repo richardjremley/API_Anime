@@ -84,10 +84,9 @@ button.addEventListener("click", async () => {
   let cultureOptions = response.data.culture;
   let cultures = document.createElement("h3");
   cultures.innerHTML = `Culture: ${cultureOptions}`;
-  if ((cultureOptions = `""`)) {
-  } else {
-    section.appendChild(cultures);
-  }
+
+  section.appendChild(cultures);
+
   let diedOptions = response.data.died;
   let died = document.createElement("h3");
   died.innerHTML = `Year of Death: ${diedOptions}`;
