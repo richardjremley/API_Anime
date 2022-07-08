@@ -1,8 +1,8 @@
-# Project: API Anime database.
+# Project: Song of Ice and Fire API
 ## By: Richard Remley
-## Description
+## Original Description
 ### This will be a Anime API project. The plan is to have the API search some sort of large database of anime by name, while the API will display some sort of picture, name of the anime, plus a brief description. Stretch goals would involve showing a list of characters, reviews, etc.
-
+## Later description
 ### While conceived of as an anime API, due to the difficulty of setting up the repositories, this ended up being a Game of Thrones API. Sadly the input options were a little primitive, only taking numbers, but I was able to set up two search boxes to work around some of the limitations. I styled my page rather well all things considered, and while not exactly complex, I believe it works with the theme and tone of the books.
 ## Technologies Used
 ### HTML/CSS/Javascript
